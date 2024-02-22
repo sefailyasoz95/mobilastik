@@ -47,15 +47,18 @@ const HomeScreen = (props: Props) => {
 							parallaxScrollingOffset: 15,
 						}}
 						data={[
-							require("../../Assets/onboarding/winter.png"),
-							require("../../Assets/onboarding/tires.png"),
-							require("../../Assets/onboarding/motorcycle2.png"),
-							require("../../Assets/onboarding/motor3.png"),
+							require("../../Assets/brands/bridgestone.jpg"),
+							require("../../Assets/brands/continental.jpg"),
+							require("../../Assets/brands/dunlop.jpeg"),
+							require("../../Assets/brands/goodyear.jpg"),
+							require("../../Assets/brands/lassa.jpg"),
+							require("../../Assets/brands/Michelin.png"),
+							require("../../Assets/brands/petlas.jpg"),
+							require("../../Assets/brands/pirelli.png"),
 						]}
 						renderItem={({ item, index }) => (
 							<View className='w-3/4 self-center items-center'>
 								<Image source={item} key={index} className='w-full h-[140px]' resizeMode='contain' />
-								<Text>{index} text</Text>
 							</View>
 						)}
 					/>
