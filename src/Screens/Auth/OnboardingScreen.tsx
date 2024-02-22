@@ -1,6 +1,5 @@
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
-import Header from "../../Components/Header";
 import Carousel from "react-native-reanimated-carousel";
 import { DEVICE_HEIGHT, DEVICE_WIDTH } from "../../Utils/constants";
 import { Easing } from "react-native-reanimated";

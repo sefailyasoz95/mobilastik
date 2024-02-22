@@ -25,9 +25,9 @@ const SignUpScreen = ({ navigation, route }: Props) => {
 	return (
 		<SafeAreaView className='flex-1 bg-slate-200 justify-between' edges={["bottom", "left", "right"]}>
 			<KeyboardAvoidingView behavior='padding'>
-				<ScrollView>
+				<ScrollView bounces={false}>
 					<View
-						className='px-5 bg-white pb-6 rounded-2xl shadow-md shadow-gray-300'
+						className='px-5 bg-white mb-6 pb-2 rounded-2xl shadow-md shadow-gray-300'
 						style={{
 							paddingTop: safeAreaInsets.top * 2,
 						}}>
@@ -54,6 +54,7 @@ const SignUpScreen = ({ navigation, route }: Props) => {
 						<View className='shadow-md shadow-gray-300 bg-white rounded-full px-3 mb-5'>
 							<Dropdown
 								placeholderStyle={styles.placeholderStyle}
+								selectedTextStyle={styles.itemTextStyle}
 								data={CarTypes}
 								maxHeight={300}
 								containerStyle={styles.container}
@@ -69,6 +70,7 @@ const SignUpScreen = ({ navigation, route }: Props) => {
 						<View className='shadow-md shadow-gray-300 bg-white rounded-full px-3 mb-5'>
 							<Dropdown
 								placeholderStyle={styles.placeholderStyle}
+								selectedTextStyle={styles.itemTextStyle}
 								data={CityTown.İstanbul}
 								maxHeight={300}
 								containerStyle={styles.container}
@@ -95,7 +97,7 @@ const SignUpScreen = ({ navigation, route }: Props) => {
 					onPress={() => navigation.navigate("SignUpScreen")}>
 					<Text className='font-medium'>Ücretsiz Üye Ol</Text>
 				</TouchableOpacity>
-				<Text className='text-center my-2'>yada</Text>
+				<Text className='text-center my-2'>ya da</Text>
 				<TouchableOpacity
 					className='w-2/3 self-center border rounded-full items-center py-2'
 					onPress={() => navigation.navigate("SignInScreen")}>
@@ -111,8 +113,12 @@ export default SignUpScreen;
 const styles = StyleSheet.create({
 	placeholderStyle: {
 		color: "#ccc",
+		fontSize: 14,
 	},
 	container: {
 		borderRadius: 16,
+	},
+	itemTextStyle: {
+		fontSize: 14,
 	},
 });
